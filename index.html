@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Who is Meesh - Learn more about Michelle">
     <title>Who is Meesh?</title>
+    
+    <!-- Import Google Fonts for cursive font -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
     <style>
         /* Barbie-Themed Background with Pinks */
         body {
@@ -18,12 +22,13 @@
             background-attachment: fixed;
         }
 
+        /* Update h1 to be white and cursive */
         h1 {
             text-align: center;
-            color: #FF69B4; /* Hot Pink */
+            color: #ffffff; /* White color */
             font-size: 48px;
             margin-bottom: 20px;
-            font-family: 'Comic Sans MS', cursive; /* Fun and playful font */
+            font-family: 'Pacifico', cursive; /* Cursive font */
             text-transform: uppercase;
             letter-spacing: 2px;
         }
@@ -80,6 +85,17 @@
             text-decoration: underline;
             color: #C71585;
         }
+
+        /* Hidden sections by default */
+        .content-section {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff0f5; /* Light pink background for hidden sections */
+            border: 1px solid #ff1493; /* Pink border */
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -87,36 +103,53 @@
     <h1>Who is Meesh?</h1>
 
     <div class="container">
-        <h2>About Me</h2>
-        <p>Hi there! I’m Michelle, but everyone calls me Meesh. You could say I’m a blend of Barbie and tech—passionate about both creativity and innovation. I’ve found my way into the tech world, but it was my love for film that first guided me to discover who I am. There’s a certain glamour to storytelling, whether it’s on screen or through code, and I embrace it all!</p>
+        <h2>Click to Learn More</h2>
 
-        <h2>A Barbie in Film</h2>
-        <p>I used to spend my days on film sets, working alongside some incredible storytellers and creatives. My background as a theatre major helped me fall in love with the art of production. These experiences taught me the importance of detail, creativity, and collaboration. Even now, as I dive deeper into the world of technology, I carry the lessons from those days with me.</p>
+        <!-- Clickable Links -->
+        <p><a href="#" onclick="toggleSection('film')">A Barbie in Film</a></p>
+        <div id="film" class="content-section">
+            <p>I used to spend my days on film sets, working alongside some incredible storytellers and creatives. My background as a theatre major helped me fall in love with the art of production. These experiences taught me the importance of detail, creativity, and collaboration. Even now, as I dive deeper into the world of technology, I carry the lessons from those days with me.</p>
+            <p>These days, you’re likely to find me enjoying a hike with my husband and our charcoal Labrador. We love Malibu Beach, where the waves meet the sunset—it’s pure magic. Malibu isn’t just for Barbie, it’s also for Meesh!</p>
+            <img src="/malibu-beach.png" alt="Malibu Beach" class="malibu-image">
+        </div>
 
-        <p>These days, you’re likely to find me enjoying a hike with my husband and our charcoal Labrador. We love Malibu Beach, where the waves meet the sunset—it's pure magic. Malibu isn’t just for Barbie, it’s also for Meesh!</p>
+        <p><a href="#" onclick="toggleSection('movies')">Favorite Movies</a></p>
+        <div id="movies" class="content-section">
+            <p>I’m all about films that are unique and stylish, just like Barbie’s outfits. My top favorites include:</p>
+            <ul>
+                <li><strong>Beetlejuice</strong> – A quirky, colorful masterpiece that inspires me to think outside the box.</li>
+                <li><strong>Double Indemnity</strong> – A sleek, classic noir that has a dark, glamorous edge.</li>
+                <li><strong>Sabrina</strong> – Audrey Hepburn in her most iconic and elegant role. The fashion, the grace—it’s unforgettable!</li>
+            </ul>
+        </div>
 
-        <!-- Malibu Beach Image -->
-        <img src="/mnt/data/image.png" alt="Malibu Beach" class="malibu-image">
+        <p><a href="#" onclick="toggleSection('family')">Barbie's Family First</a></p>
+        <div id="family" class="content-section">
+            <p>Just like Barbie has her close-knit group of friends, family is my biggest source of strength. My sister, whom I lovingly call "Peanut," is one of my biggest inspirations. She just qualified for the Boston Marathon—a true Barbie-level achievement! Her determination pushes me to keep striving for my own goals.</p>
+        </div>
 
-        <h2>Favorite Movies</h2>
-        <p>I’m all about films that are unique and stylish, just like Barbie’s outfits. My top favorites include:</p>
-        <ul>
-            <li><strong>Beetlejuice</strong> – A quirky, colorful masterpiece that inspires me to think outside the box.</li>
-            <li><strong>Double Indemnity</strong> – A sleek, classic noir that has a dark, glamorous edge.</li>
-            <li><strong>Sabrina</strong> – Audrey Hepburn in her most iconic and elegant role. The fashion, the grace—it’s unforgettable!</li>
-        </ul>
-
-        <h2>Barbie’s Family First</h2>
-        <p>Just like Barbie has her close-knit group of friends, family is my biggest source of strength. My sister, whom I lovingly call "Peanut," is one of my biggest inspirations. She just qualified for the Boston Marathon—a true Barbie-level achievement! Her determination pushes me to keep striving for my own goals.</p>
-
-        <h2>A Tech-Savvy Barbie</h2>
-        <p>While Barbie has her dreamhouse, I have my dream in tech. A few years ago, I started a podcast with a friend, and that’s where my journey into coding began. We’ve been building our website, and with the help of <span class="highlight">Vercel</span>, I’m excited to continue updating it with new episodes every week. The possibilities are endless, and I love a challenge!</p>
+        <p><a href="#" onclick="toggleSection('tech')">A Tech-Savvy Barbie</a></p>
+        <div id="tech" class="content-section">
+            <p>While Barbie has her dreamhouse, I have my dream in tech. A few years ago, I started a podcast with a friend, and that’s where my journey into coding began. We’ve been building our website, and with the help of <span class="highlight">Vercel</span>, I’m excited to continue updating it with new episodes every week. The possibilities are endless, and I love a challenge!</p>
+        </div>
 
     </div>
 
     <div class="footer">
         <p>Thanks for stopping by! Feel free to <a href="mailto:meesh@example.com">get in touch</a>.</p>
     </div>
+
+    <script>
+        // JavaScript function to toggle the display of content sections
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
