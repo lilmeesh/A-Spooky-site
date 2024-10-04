@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Who is Meesh - Beetlejuice Themed Page">
-    <title>Who is Meesh?</title>
+    <meta name="description" content="Michelle's Information - Beetlejuice Themed Page">
+    <title>Michelle's Information</title>
     
     <style>
-        /* Beetlejuice-Themed Background with Stripes */
+        /* Subtle Beetlejuice-Themed Background */
         body {
             font-family: 'Georgia', serif;
             color: #EEE; /* Light grey text */
@@ -15,9 +15,10 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            background: linear-gradient(135deg, #111 50%, #fff 50%);
-            background-attachment: fixed;
-            background-size: 100px 100px;
+            background-color: #111; /* Dark charcoal background */
+            background-image: radial-gradient(circle, rgba(0, 255, 0, 0.15) 20%, transparent 20%), radial-gradient(circle, rgba(85, 26, 139, 0.15) 20%, transparent 20%);
+            background-position: 0 0, 50px 50px;
+            background-size: 100px 100px; /* Subtle green and purple dots */
         }
 
         /* Heading style */
@@ -29,51 +30,76 @@
             font-family: 'Georgia', serif;
             text-transform: uppercase;
             letter-spacing: 2px;
+            text-shadow: 2px 2px 5px #551A8B; /* Purple shadow */
         }
 
-        /* Style for the Showtime button */
-        .showtime-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #551a8b; /* Dark Purple */
-            color: #ffffff;
-            font-size: 24px;
+        h2 {
+            color: #551a8b; /* Dark purple */
+            font-size: 30px;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #EEE;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #00FF00; /* Neon green highlights */
             font-weight: bold;
-            padding: 20px;
+        }
+
+        /* Styling for Malibu image */
+        .malibu-image {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
             border-radius: 10px;
-            border: 3px solid #00FF00; /* Neon green border */
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 50px;
+            border: 6px solid #00FF00; /* Neon green border */
         }
 
-        .showtime-box:hover {
-            background-color: #00FF00; /* Neon green on hover */
-            color: #000;
-            border: 3px solid #551a8b; /* Switch to purple border */
-        }
-
-        /* Footer styling */
         .footer {
             text-align: center;
             margin-top: 40px;
             color: #EEE;
             font-size: 16px;
         }
+
+        a {
+            color: #00FF00;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Who is Meesh?</h1>
+    <h1>Michelle's Story</h1>
 
-    <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
-        Showtime!
+    <div class="container">
+        <h2>A Career in Film and Technology</h2>
+        <p>Before diving into the world of technology, I spent years working on film sets, learning the art of storytelling, and collaborating with talented creatives. My background as a theatre major fostered my love for production and gave me a deep appreciation for the power of creative collaboration.</p>
+
+        <p>Even today, those experiences influence my work in tech. I approach every project with the same attention to detail and passion for innovation that I learned on set. Now, when I'm not immersed in tech, you can find me hiking with my husband and our charcoal Labrador, often exploring the scenic beauty of Malibu Beach.</p>
+        <img src="/malibu-beach.png" alt="Malibu Beach" class="malibu-image">
+
+        <h2>Favorite Movies</h2>
+        <p>I have a deep appreciation for films that blend creativity, mystery, and style—films that surprise you and make you think. Some of my favorite movies are:</p>
+        <ul>
+            <li><strong>Beetlejuice</strong> – A quirky, offbeat masterpiece that inspires me to embrace my weird and creative side.</li>
+            <li><strong>Double Indemnity</strong> – A timeless noir that has an edge of danger and elegance.</li>
+            <li><strong>Sabrina</strong> – A perfect balance of charm and style, led by the unforgettable Audrey Hepburn.</li>
+        </ul>
+
+        <h2>Family and Inspiration</h2>
+        <p>Family is the foundation of everything I do. I’m incredibly close to my sister, whom I affectionately call "Peanut." Her strength and determination inspire me daily, especially now that she’s qualified for the Boston Marathon. Her success reminds me to keep pushing forward and chasing my own goals.</p>
+
+        <h2>A Journey in Technology</h2>
+        <p>My interest in technology grew when I started a podcast with a close friend. It was through this project that I discovered my passion for coding and the endless possibilities that come with building in the digital world. We’ve worked hard to create a platform where we can share new episodes with our listeners, and <span class="highlight">Vercel</span> has been instrumental in helping us achieve that. I'm constantly excited to learn more, solve challenges, and continue building.</p>
     </div>
 
     <div class="footer">
-        <p>Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #00FF00; text-decoration: none;">get in touch</a>.</p>
+        <p>Thanks for visiting! Feel free to <a href="mailto:meesh@example.com">get in touch</a>.</p>
     </div>
 
 </body>
