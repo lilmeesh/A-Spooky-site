@@ -7,7 +7,7 @@
     <title>Who is Meesh?</title>
     
     <style>
-        /* Clean Beetlejuice-Themed Background with Pastel Purple Stripes */
+        /* Spookier Beetlejuice-Themed Background with Dark Colors */
         body {
             font-family: 'Georgia', serif;
             color: #4B0082; /* Deep Purple text */
@@ -15,10 +15,11 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            background-color: #f7f7f7; /* Light, neutral background */
-            background-image: linear-gradient(45deg, #f7f7f7 25%, #e6d3f1 25%, #e6d3f1 50%, #f7f7f7 50%, #f7f7f7 75%, #e6d3f1 75%);
-            background-size: 100px 100px; /* Subtle pastel purple criss-cross pattern */
+            background-color: #1d1b1b; /* Darker background */
+            background-image: linear-gradient(45deg, #1d1b1b 25%, #3a3a3a 25%, #3a3a3a 50%, #1d1b1b 50%, #1d1b1b 75%, #3a3a3a 75%);
+            background-size: 100px 100px; /* Darker criss-cross pattern */
             position: relative;
+            overflow: hidden; /* Ensure fog stays inside */
         }
 
         /* Heading style */
@@ -30,7 +31,7 @@
             font-family: 'Georgia', serif;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 5px #551A8B; /* Purple shadow */
+            text-shadow: 2px 2px 10px #551A8B; /* Brighter Purple shadow */
         }
 
         /* Cobweb decoration for corners */
@@ -52,7 +53,7 @@
             right: 0;
         }
 
-        /* Style for the Showtime button */
+        /* Style for the Showtime button with flickering neon effect */
         .showtime-box {
             display: flex;
             align-items: center;
@@ -66,10 +67,17 @@
             border: 3px solid #00FF00; /* Neon green border */
             text-align: center;
             cursor: pointer;
+            animation: flicker 1.5s infinite;
             transition: all 0.3s ease;
             margin-top: 50px;
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Neon glow */
             position: relative;
+        }
+
+        /* Flickering Neon Animation */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
         }
 
         .showtime-box:hover {
@@ -79,15 +87,49 @@
             box-shadow: 0 0 20px rgba(85, 26, 139, 0.8); /* Purple glow on hover */
         }
 
-        /* Bat decoration next to Showtime button */
+        /* Flying bats with animation */
         .bat {
             position: absolute;
-            top: -20px;
-            right: -40px;
+            top: -50px;
             width: 50px;
             height: 50px;
             background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Bat_icon.svg/640px-Bat_icon.svg.png') no-repeat center;
             background-size: contain;
+            animation: fly 10s infinite linear;
+        }
+
+        /* Animation for bats flying across the screen */
+        .bat:nth-child(1) {
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .bat:nth-child(2) {
+            left: -200px;
+            animation-delay: 3s;
+        }
+
+        .bat:nth-child(3) {
+            left: -300px;
+            animation-delay: 6s;
+        }
+
+        @keyframes fly {
+            0% {
+                top: 10%;
+                left: -100px;
+                transform: scale(0.5) rotate(0deg);
+            }
+            50% {
+                top: 50%;
+                left: 50%;
+                transform: scale(1) rotate(20deg);
+            }
+            100% {
+                top: 10%;
+                left: 100%;
+                transform: scale(0.5) rotate(0deg);
+            }
         }
 
         /* Pumpkins in the footer */
@@ -112,20 +154,44 @@
             align-items: center;
             justify-content: center;
         }
+
+        /* Fog Effect */
+        .fog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/fog.png');
+            opacity: 0.15;
+            animation: drift 20s infinite linear;
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-200px, -100px);
+            }
+        }
+
     </style>
 </head>
 <body>
 
     <h1>Who is Meesh?</h1>
 
-    <!-- Halloween decorations: cobwebs -->
+    <!-- Halloween decorations: cobwebs and animated bats -->
     <div class="cobweb top-left"></div>
     <div class="cobweb top-right"></div>
+    <div class="bat"></div>
+    <div class="bat"></div>
+    <div class="bat"></div>
 
     <!-- Showtime Button with Bat Decoration -->
     <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
         Showtime!
-        <div class="bat"></div> <!-- Bat next to the button -->
     </div>
 
     <!-- Footer with Pumpkins -->
@@ -136,6 +202,9 @@
             <span class="footer-pumpkin"></span> <!-- Right Pumpkin -->
         </p>
     </div>
+
+    <!-- Fog effect for the spooky vibe -->
+    <div class="fog"></div>
 
 </body>
 </html>
