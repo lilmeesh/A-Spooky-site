@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Who is Meesh - Hocus Pocus Themed Page">
     <title>Who is Meesh?</title>
     
     <style>
-        /* Clean Hocus Pocus-Themed Background with Broomsticks */
+        /* Clean Hocus Pocus-Themed Background */
         body {
             font-family: 'Georgia', serif;
             color: #ffffff; /* White text */
@@ -16,12 +15,9 @@
             padding: 20px;
             line-height: 1.6;
             background-color: #2e003e; /* Deep purple */
-            background-image: url('/broomstick.png'), radial-gradient(circle at 50% 50%, #4b0082, #2e003e); /* Broomstick background image */
-            background-size: 150px 150px; /* Set the size of broomstick pattern */
-            background-repeat: repeat;
+            background-image: radial-gradient(circle at 50% 50%, #4b0082, #2e003e);
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            overflow: hidden; /* Ensure everything stays inside the page */
         }
 
         /* Heading style */
@@ -35,46 +31,8 @@
             text-shadow: 2px 2px 8px #FFAA00; /* Bright golden shadow */
         }
 
-        /* Witch broom decorations */
-        .witch-broom {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100px;
-            height: 100px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Broom_icon.svg/1024px-Broom_icon.svg.png') no-repeat center;
-            background-size: contain;
-        }
-
-        .witch-broom-right {
-            top: 0;
-            right: 0;
-        }
-
-        /* Flying witch animation */
-        .flying-witch {
-            position: absolute;
-            top: 50px;
-            left: -150px; /* Start off the screen */
-            width: 100px;
-            height: 100px;
-            background: url('/witch.png') no-repeat center; /* Local witch image */
-            background-size: contain;
-            animation: fly 8s infinite linear;
-        }
-
-        /* Keyframes for the witch flying across the screen */
-        @keyframes fly {
-            0% {
-                left: -150px;
-            }
-            100% {
-                left: 100%;
-            }
-        }
-
-        /* Style for the Showtime button */
-        .showtime-box {
+        /* Style for the Button with new text */
+        .hocus-pocus-button {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -92,7 +50,7 @@
             box-shadow: 0 0 15px rgba(255, 221, 87, 0.5); /* Soft gold glow */
         }
 
-        .showtime-box:hover {
+        .hocus-pocus-button:hover {
             background-color: #FFDD57; /* Magical gold on hover */
             color: #4b0082; /* Deep purple text on hover */
             border: 3px solid #4b0082; /* Switch to purple border */
@@ -113,39 +71,20 @@
             justify-content: center;
         }
 
-        .footer-broom {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Broom_icon.svg/1024px-Broom_icon.svg.png') no-repeat center;
-            background-size: contain;
-        }
-
     </style>
 </head>
 <body>
 
     <h1>Who is Meesh?</h1>
 
-    <!-- Witch broom decorations for a subtle spooky touch -->
-    <div class="witch-broom"></div>
-    <div class="witch-broom witch-broom-right"></div>
-
-    <!-- Flying Witch -->
-    <div class="flying-witch"></div>
-
-    <!-- Showtime Button -->
-    <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
-        Showtime!
+    <!-- Hocus Pocus Button with new text -->
+    <div class="hocus-pocus-button" onclick="window.location.href='michelle-info.html'">
+        It's all a bunch of Hocus Pocus!
     </div>
 
-    <!-- Footer with Witch Brooms -->
+    <!-- Footer -->
     <div class="footer">
-        <p>
-            <span class="footer-broom"></span> <!-- Left Broom -->
-            Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #FFDD57; text-decoration: none; margin-left: 5px;">get in touch</a>
-            <span class="footer-broom"></span> <!-- Right Broom -->
-        </p>
+        <p>Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #FFDD57; text-decoration: none; margin-left: 5px;">get in touch</a></p>
     </div>
 
 </body>
