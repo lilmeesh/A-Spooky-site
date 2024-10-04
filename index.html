@@ -19,6 +19,7 @@
             background-image: radial-gradient(circle at 50% 50%, #4b0082, #2e003e);
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden; /* Ensure the witch stays inside the page */
         }
 
         /* Heading style */
@@ -46,6 +47,28 @@
         .witch-broom-right {
             top: 0;
             right: 0;
+        }
+
+        /* Flying witch animation */
+        .flying-witch {
+            position: absolute;
+            top: 50px;
+            left: -150px; /* Start off the screen */
+            width: 100px;
+            height: 100px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Halloween_Witch.svg/1024px-Halloween_Witch.svg.png') no-repeat center;
+            background-size: contain;
+            animation: fly 8s infinite linear;
+        }
+
+        /* Keyframes for the witch flying across the screen */
+        @keyframes fly {
+            0% {
+                left: -150px;
+            }
+            100% {
+                left: 100%;
+            }
         }
 
         /* Style for the Showtime button */
@@ -105,6 +128,9 @@
     <!-- Witch broom decorations for a subtle spooky touch -->
     <div class="witch-broom"></div>
     <div class="witch-broom witch-broom-right"></div>
+
+    <!-- Flying Witch -->
+    <div class="flying-witch"></div>
 
     <!-- Showtime Button -->
     <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
