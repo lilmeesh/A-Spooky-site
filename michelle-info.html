@@ -10,31 +10,30 @@
         /* Clean Hocus Pocus-Themed Background */
         body {
             font-family: 'Georgia', serif;
-            color: #4B0082; /* Deep Purple text */
+            color: #ffffff; /* White text */
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            background-color: #2b2d42; /* Deep twilight blue background */
-            background-image: radial-gradient(circle, #533a71 30%, #2b2d42 100%);
-            position: relative;
+            background-color: #2e003e; /* Deep purple */
+            background-image: radial-gradient(circle at 50% 50%, #4b0082, #2e003e);
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         /* Heading style */
         h1 {
             text-align: center;
-            color: #FFDD57; /* Enchanted gold */
+            color: #FFDD57; /* Magical gold */
             font-size: 48px;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 10px #FFC107; /* Golden shadow */
+            text-shadow: 2px 2px 8px #FFAA00; /* Bright golden shadow */
         }
 
         h2 {
-            color: #FFAA00; /* Softer gold */
+            color: #FFDD57; /* Gold */
             font-size: 30px;
             margin-top: 30px;
         }
@@ -46,7 +45,7 @@
         }
 
         .highlight {
-            color: #FFC107; /* Magic golden highlights */
+            color: #FFAA00; /* Golden highlights */
             font-weight: bold;
         }
 
@@ -63,16 +62,8 @@
         .footer {
             text-align: center;
             margin-top: 40px;
-            color: #EEEEEE;
+            color: #FFDD57;
             font-size: 16px;
-        }
-
-        .footer-star {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Gold_star.svg/1024px-Gold_star.svg.png') no-repeat center;
-            background-size: contain;
         }
 
         .footer p {
@@ -81,27 +72,28 @@
             justify-content: center;
         }
 
-        /* Subtle sparkle decoration for Hocus Pocus theme */
-        .sparkles {
-            position: absolute;
-            top: -20px;
-            right: -30px;
-            width: 80px;
-            height: 80px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sparkle_Star.svg/1200px-Sparkle_Star.svg.png') no-repeat center;
+        .footer-broom {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Broom_icon.svg/1024px-Broom_icon.svg.png') no-repeat center;
             background-size: contain;
         }
 
-        .sparkles-left {
-            top: 20px;
-            left: -40px;
-            width: 50px;
-            height: 50px;
+        /* Witch broom decoration */
+        .witch-broom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Broom_icon.svg/1024px-Broom_icon.svg.png') no-repeat center;
+            background-size: contain;
         }
 
-        /* Favorite Movies Section */
-        .favorite-movies {
-            color: #FFFFFF; /* Changed to white */
+        .witch-broom-right {
+            top: 0;
+            right: 0;
         }
 
     </style>
@@ -110,9 +102,9 @@
 
     <h1>Michelle's Journey</h1>
 
-    <!-- Magical sparkles to enhance the Hocus Pocus theme -->
-    <div class="sparkles"></div>
-    <div class="sparkles sparkles-left"></div>
+    <!-- Witch broom decorations -->
+    <div class="witch-broom"></div>
+    <div class="witch-broom witch-broom-right"></div>
 
     <div class="container">
         <h2>A Career in Film and Technology</h2>
@@ -130,8 +122,8 @@
         <p>In my role, I’m constantly looking to enhance my technical knowledge to better support my customers. By working closely with our <span class="highlight">solutions architect</span> and <span class="highlight">product teams</span>, I’m learning the inner workings of our platform and solutions so I can provide deeper insights and technical support. I enjoy diving into the technical side of things, from understanding product architecture to exploring how integrations work, and I look forward to continuing to expand this knowledge.</p>
 
         <h2 class="favorite-movies">Favorite Movies</h2>
-        <p class="favorite-movies">I have a deep appreciation for films that blend creativity, mystery, and style—films that surprise you and make you think. Some of my favorite movies are:</p>
-        <ul class="favorite-movies">
+        <p>I have a deep appreciation for films that blend creativity, mystery, and style—films that surprise you and make you think. Some of my favorite movies are:</p>
+        <ul>
             <li><strong>Beetlejuice</strong> – A quirky, offbeat masterpiece that inspires me to embrace my weird and creative side.</li>
             <li><strong>Double Indemnity</strong> – A timeless noir that has an edge of danger and elegance.</li>
             <li><strong>Sabrina</strong> – A perfect balance of charm and style, led by the unforgettable Audrey Hepburn.</li>
@@ -141,12 +133,12 @@
         <p>Family is the foundation of everything I do. I’m incredibly close to my sister, whom I affectionately call "Peanut." Her strength and determination inspire me daily, especially now that she’s qualified for the Boston Marathon. Her success reminds me to keep pushing forward and chasing my own goals.</p>
     </div>
 
-    <!-- Footer with Stars for a Magical Feel -->
+    <!-- Footer with Witch Brooms -->
     <div class="footer">
         <p>
-            <span class="footer-star"></span> <!-- Left Star -->
+            <span class="footer-broom"></span> <!-- Left Broom -->
             Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #FFDD57; text-decoration: none; margin-left: 5px;">get in touch</a>
-            <span class="footer-star"></span> <!-- Right Star -->
+            <span class="footer-broom"></span> <!-- Right Broom -->
         </p>
     </div>
 
