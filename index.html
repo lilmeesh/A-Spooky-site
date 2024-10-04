@@ -18,6 +18,7 @@
             background-color: #f7f7f7; /* Light, neutral background */
             background-image: linear-gradient(45deg, #f7f7f7 25%, #e6d3f1 25%, #e6d3f1 50%, #f7f7f7 50%, #f7f7f7 75%, #e6d3f1 75%);
             background-size: 100px 100px; /* Subtle pastel purple criss-cross pattern */
+            position: relative;
         }
 
         /* Heading style */
@@ -30,7 +31,25 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             text-shadow: 2px 2px 5px #551A8B; /* Purple shadow */
-            position: relative; /* To allow the spider to position relative to this title */
+        }
+
+        /* Cobweb decoration for corners */
+        .cobweb {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Spider_Web.svg/1024px-Spider_Web.svg.png') no-repeat center;
+            background-size: contain;
+        }
+
+        .cobweb.top-left {
+            top: 0;
+            left: 0;
+        }
+
+        .cobweb.top-right {
+            top: 0;
+            right: 0;
         }
 
         /* Style for the Showtime button */
@@ -50,6 +69,7 @@
             transition: all 0.3s ease;
             margin-top: 50px;
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Neon glow */
+            position: relative;
         }
 
         .showtime-box:hover {
@@ -59,35 +79,24 @@
             box-shadow: 0 0 20px rgba(85, 26, 139, 0.8); /* Purple glow on hover */
         }
 
-        /* Spider Web */
-        .spider-web {
+        /* Bat decoration next to Showtime button */
+        .bat {
             position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 300px;
-            background-color: #000; /* Web thread */
-        }
-
-        /* Realistic Spider using Image */
-        .spider {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            top: -20px;
+            right: -40px;
             width: 50px;
-            animation: crawl 8s infinite; /* Smooth crawling animation */
+            height: 50px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Bat_icon.svg/640px-Bat_icon.svg.png') no-repeat center;
+            background-size: contain;
         }
 
-        /* Keyframes for the spider crawling down */
-        @keyframes crawl {
-            0% {
-                top: 0;
-            }
-            100% {
-                top: 400px; /* Crawl past the "Showtime" button */
-            }
+        /* Pumpkins in the footer */
+        .footer-pumpkin {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Halloween_pumpkin_icon.svg/640px-Halloween_pumpkin_icon.svg.png') no-repeat center;
+            background-size: contain;
         }
 
         /* Footer styling */
@@ -97,22 +106,35 @@
             color: #4B0082;
             font-size: 16px;
         }
+
+        .footer p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
 
     <h1>Who is Meesh?</h1>
 
-    <!-- Spider Web and Realistic Spider Image -->
-    <div class="spider-web"></div>
-    <img src="/spider.png" alt="Spider" class="spider"> <!-- Assuming the spider image is saved as spider.png in the public folder -->
+    <!-- Halloween decorations: cobwebs -->
+    <div class="cobweb top-left"></div>
+    <div class="cobweb top-right"></div>
 
+    <!-- Showtime Button with Bat Decoration -->
     <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
         Showtime!
+        <div class="bat"></div> <!-- Bat next to the button -->
     </div>
 
+    <!-- Footer with Pumpkins -->
     <div class="footer">
-        <p>Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #00FF00; text-decoration: none;">get in touch</a>.</p>
+        <p>
+            <span class="footer-pumpkin"></span> <!-- Left Pumpkin -->
+            Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #00FF00; text-decoration: none; margin-left: 5px;">get in touch</a>
+            <span class="footer-pumpkin"></span> <!-- Right Pumpkin -->
+        </p>
     </div>
 
 </body>
