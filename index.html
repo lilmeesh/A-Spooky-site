@@ -74,47 +74,60 @@
             background: radial-gradient(circle, transparent 60px, #f7f7f7 61px, transparent 61px);
         }
 
-        /* Spider */
+        /* Cartoon Spider */
         .spider {
             position: absolute;
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
+            width: 40px;
+            height: 40px;
             background-color: #000;
             border-radius: 50%;
             animation: crawl 6s infinite;
         }
 
-        /* Spider Legs - Eight legs using ::before and ::after for each side */
+        /* Cartoon Spider Eyes */
         .spider::before, .spider::after {
             content: '';
             position: absolute;
-            width: 30px;
+            background-color: white;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+        }
+
+        .spider::before {
+            left: 8px;
+            top: 10px;
+        }
+
+        .spider::after {
+            right: 8px;
+            top: 10px;
+        }
+
+        /* Spider Legs */
+        .spider-leg {
+            content: '';
+            position: absolute;
+            width: 25px;
             height: 2px;
             background-color: #000;
+            border-radius: 2px;
+            animation: legMove 6s infinite;
         }
 
-        /* Left-side legs */
-        .spider::before {
-            top: 0;
-            left: -30px;
-            display: block;
-            transform: rotate(45deg);
-            box-shadow:
-                0 4px, 0 8px, 0 12px; /* Simulates 3 legs */
-        }
-
-        /* Right-side legs */
-        .spider::after {
-            top: 0;
-            right: -30px;
-            display: block;
-            transform: rotate(-45deg);
-            box-shadow:
-                0 4px, 0 8px, 0 12px; /* Simulates 3 legs */
-        }
+        /* Positioning the legs (four on each side) */
+        .spider-leg.leg-1 { top: 10px; left: -25px; transform: rotate(30deg); }
+        .spider-leg.leg-2 { top: 20px; left: -25px; transform: rotate(10deg); }
+        .spider-leg.leg-3 { top: 30px; left: -25px; transform: rotate(-10deg); }
+        .spider-leg.leg-4 { top: 40px; left: -25px; transform: rotate(-30deg); }
+        
+        .spider-leg.leg-5 { top: 10px; right: -25px; transform: rotate(-30deg); }
+        .spider-leg.leg-6 { top: 20px; right: -25px; transform: rotate(-10deg); }
+        .spider-leg.leg-7 { top: 30px; right: -25px; transform: rotate(10deg); }
+        .spider-leg.leg-8 { top: 40px; right: -25px; transform: rotate(30deg); }
 
         /* Keyframes for the spider crawling down */
         @keyframes crawl {
@@ -124,6 +137,12 @@
             100% {
                 top: 400px; /* Crawl past the "Showtime" button */
             }
+        }
+
+        /* Keyframes for leg movement */
+        @keyframes legMove {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
         }
 
         /* Footer styling */
@@ -139,9 +158,19 @@
 
     <h1>Who is Meesh?</h1>
 
-    <!-- Spider Web and Spider -->
+    <!-- Spider Web and Cartoon Spider -->
     <div class="spider-web"></div>
-    <div class="spider"></div>
+    <div class="spider">
+        <!-- Spider Legs -->
+        <div class="spider-leg leg-1"></div>
+        <div class="spider-leg leg-2"></div>
+        <div class="spider-leg leg-3"></div>
+        <div class="spider-leg leg-4"></div>
+        <div class="spider-leg leg-5"></div>
+        <div class="spider-leg leg-6"></div>
+        <div class="spider-leg leg-7"></div>
+        <div class="spider-leg leg-8"></div>
+    </div>
 
     <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
         Showtime!
