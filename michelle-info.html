@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Michelle's Information - Hocus Pocus Themed Page">
+    <meta name="description" content="Michelle's Information - Halloween Themed Page">
     <title>Michelle's Story</title>
     
     <style>
-        /* Clean Hocus Pocus-Themed Background */
+        /* Clean Halloween-Themed Background */
         body {
             font-family: 'Georgia', serif;
-            color: #ffffff; /* White text */
+            color: #EEEEEE; /* Light text */
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            background-color: #2e003e; /* Deep purple */
-            background-image: radial-gradient(circle at 50% 50%, #4b0082, #2e003e);
+            background-color: #2b2d42; /* Deep twilight blue background */
+            background-image: radial-gradient(circle at 50% 50%, #4b0082, #2b2d42);
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         /* Heading style */
@@ -29,7 +29,7 @@
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 8px #FFAA00; /* Bright golden shadow */
+            text-shadow: 2px 2px 10px #FFAA00; /* Bright golden shadow */
         }
 
         h2 {
@@ -49,13 +49,38 @@
             font-weight: bold;
         }
 
-        /* Styling for Malibu image */
-        .malibu-image {
-            width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 10px;
-            border: 6px solid #FFDD57; /* Gold border */
+        /* Bat decoration for Halloween theme */
+        .bat {
+            position: absolute;
+            top: -20px;
+            right: -30px;
+            width: 80px;
+            height: 80px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Bat_icon.svg/640px-Bat_icon.svg.png') no-repeat center;
+            background-size: contain;
+        }
+
+        .bat-left {
+            top: 20px;
+            left: -40px;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Witch broom decoration */
+        .witch-broom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Broom_icon.svg/1024px-Broom_icon.svg.png') no-repeat center;
+            background-size: contain;
+        }
+
+        .witch-broom-right {
+            top: 0;
+            right: 0;
         }
 
         /* Footer styling */
@@ -80,20 +105,20 @@
             background-size: contain;
         }
 
-        /* Witch broom decoration */
-        .witch-broom {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100px;
-            height: 100px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Broom_icon.svg/1024px-Broom_icon.svg.png') no-repeat center;
-            background-size: contain;
+        /* Spooky text effect for headers */
+        h1, h2 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: spooky 2s infinite alternate;
         }
 
-        .witch-broom-right {
-            top: 0;
-            right: 0;
+        @keyframes spooky {
+            0% {
+                text-shadow: 2px 2px 10px #FFAA00, -2px -2px 10px #FF6347;
+            }
+            100% {
+                text-shadow: 4px 4px 20px #FFDD57, -4px -4px 20px #FF4500;
+            }
         }
 
     </style>
@@ -102,16 +127,17 @@
 
     <h1>Michelle's Journey</h1>
 
-    <!-- Witch broom decorations -->
+    <!-- Witch broom and bat decorations for Halloween theme -->
     <div class="witch-broom"></div>
     <div class="witch-broom witch-broom-right"></div>
+    <div class="bat"></div>
+    <div class="bat bat-left"></div>
 
     <div class="container">
         <h2>A Career in Film and Technology</h2>
         <p>Before diving into the world of technology, I spent years working on film sets, learning the art of storytelling, and collaborating with talented creatives. My background as a theatre major fostered my love for production and gave me a deep appreciation for the power of creative collaboration.</p>
 
-        <p>Even today, those experiences influence my work in tech. I approach every project with the same attention to detail and passion for innovation that I learned on set. Now, when I'm not immersed in tech, you can find me hiking with my husband and our charcoal Labrador, often exploring the scenic beauty of Malibu Beach.</p>
-        <img src="/malibu-beach.png" alt="Malibu Beach" class="malibu-image">
+        <p>Even today, those experiences influence my work in tech. I approach every project with the same attention to detail and passion for innovation that I learned on set.</p>
 
         <h2>Passion for Customer Success</h2>
         <p>My passion lies in helping clients achieve their goals. I thrive on building relationships with customers, understanding their needs, and driving success through collaboration and innovative solutions. Over the years, I’ve had the privilege of working closely with amazing clients, ensuring they get the most value out of the products and services they use.</p>
