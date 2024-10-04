@@ -72,6 +72,7 @@
             margin-top: 50px;
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Neon glow */
             position: relative;
+            z-index: 2; /* Higher z-index to appear above fog */
         }
 
         /* Flickering Neon Animation */
@@ -165,6 +166,7 @@
             background: url('https://www.transparenttextures.com/patterns/fog.png');
             opacity: 0.15;
             animation: drift 20s infinite linear;
+            z-index: 1; /* Lower z-index so that buttons are clickable */
         }
 
         @keyframes drift {
