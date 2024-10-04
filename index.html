@@ -7,7 +7,7 @@
     <title>Who is Meesh?</title>
     
     <style>
-        /* Clean Hocus Pocus-Themed Background */
+        /* Clean Hocus Pocus-Themed Background with Broomsticks */
         body {
             font-family: 'Georgia', serif;
             color: #ffffff; /* White text */
@@ -16,10 +16,12 @@
             padding: 20px;
             line-height: 1.6;
             background-color: #2e003e; /* Deep purple */
-            background-image: radial-gradient(circle at 50% 50%, #4b0082, #2e003e);
+            background-image: url('/broomstick.png'), radial-gradient(circle at 50% 50%, #4b0082, #2e003e); /* Broomstick background image */
+            background-size: 150px 150px; /* Set the size of broomstick pattern */
+            background-repeat: repeat;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            overflow: hidden; /* Ensure the witch stays inside the page */
+            overflow: hidden; /* Ensure everything stays inside the page */
         }
 
         /* Heading style */
@@ -56,7 +58,7 @@
             left: -150px; /* Start off the screen */
             width: 100px;
             height: 100px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Halloween_Witch.svg/1024px-Halloween_Witch.svg.png') no-repeat center;
+            background: url('/witch.png') no-repeat center; /* Local witch image */
             background-size: contain;
             animation: fly 8s infinite linear;
         }
