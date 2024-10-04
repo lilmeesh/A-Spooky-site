@@ -6,6 +6,7 @@
     <meta name="description" content="Who is Meesh - Learn more about Michelle">
     <title>Who is Meesh?</title>
     <style>
+        /* Body styling with a background pattern of film reels and cameras */
         body {
             font-family: 'Georgia', serif;
             color: #333;
@@ -13,8 +14,12 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            background: linear-gradient(135deg, #d4f0fc, #bde0fe, #a6d8ff, #8fcffe, #79c7fd);
-            background-attachment: fixed;
+            background-color: #f0f8ff;
+            background-image: url('https://cdn.pixabay.com/photo/2015/10/12/15/09/film-984449_960_720.png'), 
+                              url('https://cdn.pixabay.com/photo/2015/09/29/11/01/camera-961999_960_720.png');
+            background-size: 300px, 300px;
+            background-position: top left, bottom right;
+            background-repeat: no-repeat;
         }
 
         h1 {
@@ -22,12 +27,14 @@
             color: #0077b6;
             font-size: 42px;
             margin-bottom: 20px;
+            font-family: 'Georgia', serif;
         }
 
         h2 {
             color: #03045e;
             margin-top: 30px;
             font-size: 28px;
+            font-family: 'Georgia', serif;
         }
 
         p {
@@ -42,10 +49,11 @@
         }
 
         .container {
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
         }
 
         .malibu-image {
@@ -79,25 +87,29 @@
 
     <div class="container">
         <h2>About Me</h2>
-        <p>Hi! I'm Michelle, though most people know me as Meesh. I’m a tech enthusiast, a film lover, and someone who deeply values my time spent with family and in nature.</p>
+        <p>Hi! I'm Michelle, but most call me Meesh. I'm a tech enthusiast, film aficionado, and someone who treasures every moment with family and nature.</p>
 
-        <h2>My Story</h2>
-        <p>Before I found my way into the world of technology, I spent years working on film sets. The energy on set was something special, and my background as a theatre major made me feel right at home. It’s where my love for storytelling truly blossomed. I was surrounded by talented creatives, constantly learning, and though my journey took me to a different field, I still carry that creative spark in everything I do.</p>
+        <h2>My Journey into Film and Beyond</h2>
+        <p>Before I found my calling in technology, I lived and breathed the film industry. Working on film sets as a theatre major was an experience like no other. I thrived in the collaborative energy and creative flow that surrounded me. The world of film isn’t just a job—it’s a passion. Even though my career has taken me into tech, my love for storytelling and production still influences how I approach life and work today.</p>
 
-        <p>When I'm not immersed in technology, you can often find me outdoors with my husband and our loyal charcoal Labrador, who adores hiking as much as we do. One of our favorite places to visit is Malibu Beach. There's something magical about watching the sun set over the water, and it gives us a chance to unplug from the digital world and connect with nature.</p>
+        <p>When I'm not working, you'll probably find me hiking with my husband and our loyal charcoal Labrador. We love exploring the scenic trails around Los Angeles, especially the peaceful paths along Malibu Beach. Watching the sunset there, with the waves crashing in the background, has a way of calming the mind and inspiring creativity.</p>
 
         <!-- Malibu Beach Image -->
         <img src="/mnt/data/image.png" alt="Malibu Beach" class="malibu-image">
 
-        <p>On the days we aren't hiking, I find comfort in films. Some of my all-time favorite movies include the quirky and dark *Beetlejuice*, the gripping classic *Double Indemnity*, and the ever-elegant *Sabrina* starring Audrey Hepburn. These films resonate with me in different ways, reminding me of the beauty of storytelling and the timeless impact of cinema.</p>
+        <h2>My Love for Cinema</h2>
+        <p>Films have always been my escape and my inspiration. Some of my all-time favorites include:</p>
+        <ul>
+            <li><strong>Beetlejuice</strong> – This quirky and eccentric film has always held a special place in my heart. Its dark humor and creativity are unmatched.</li>
+            <li><strong>Double Indemnity</strong> – A gripping noir classic. The suspense, the drama—it’s a film I can watch over and over again.</li>
+            <li><strong>Sabrina</strong> – Audrey Hepburn’s charm in this film is timeless. It’s a movie filled with elegance, wit, and romance.</li>
+        </ul>
 
-        <h2>My Sister, My Hero</h2>
-        <p>Family is everything to me, and I'm especially close to my sister, who I affectionately call "Peanut." She's an incredible person and recently qualified for the Boston Marathon, a testament to her dedication and hard work. She's my inspiration, and our bond is one of the most important things in my life.</p>
+        <h2>Family and Inspirations</h2>
+        <p>Family has always been a driving force in my life. I'm incredibly close to my sister, who I affectionately call "Peanut." She recently achieved an amazing milestone by qualifying for the Boston Marathon. Her dedication and perseverance inspire me every day, and I'm beyond proud of her!</p>
 
-        <h2>Passions and Hobbies</h2>
-        <p>Outside of tech and family, I have a few other passions. I’ve been playing the drums for years, and there's something about the rhythm and creativity of it that I love. Music, like coding, is a language, and it's one I’ve enjoyed learning.</p>
-
-        <p>Speaking of coding, my passion for technology grew when I decided to start a podcast with a friend. We’ve been working on it consistently, and one of my goals is to use <span class="highlight">Vercel</span> to update our website every week with new episodes. I love a challenge, and technology constantly offers new ones. There’s nothing like the satisfaction of solving a complex problem, and Vercel makes achieving what sometimes seems impossible feel completely within reach.</p>
+        <h2>Tech and My Podcast Journey</h2>
+        <p>A few years ago, I decided to dive into the world of technology when my friend and I started a podcast. That’s when I discovered my love for coding. Our goal is to update our podcast’s website every week with new episodes, and using <span class="highlight">Vercel</span> makes that task a joy. It provides the tools I need to achieve the impossible with ease, and there’s nothing like overcoming challenges in the tech space.</p>
 
     </div>
 
