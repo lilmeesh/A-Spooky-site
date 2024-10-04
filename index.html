@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Who is Meesh - Disney Themed Page">
+    <meta name="description" content="Who is Meesh - Hocus Pocus Themed Page">
     <title>Who is Meesh?</title>
     
     <style>
-        /* Clean Disney-Themed Background */
+        /* Clean Hocus Pocus-Themed Background */
         body {
             font-family: 'Georgia', serif;
-            color: #003366; /* Disney dark blue */
+            color: #ffffff; /* White text */
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            background-color: #b3d9ff; /* Soft Disney blue */
-            background-image: radial-gradient(circle at 50% 50%, #b3d9ff, #e6f3ff);
-            position: relative;
+            background-color: #2e003e; /* Deep purple */
+            background-image: radial-gradient(circle at 50% 50%, #4b0082, #2e003e);
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
@@ -25,31 +24,28 @@
         /* Heading style */
         h1 {
             text-align: center;
-            color: #ffcc00; /* Disney gold */
+            color: #FFDD57; /* Magical gold */
             font-size: 48px;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-family: 'Times New Roman', serif;
-            text-shadow: 2px 2px 8px #ffd700; /* Brighter gold shadow */
+            text-shadow: 2px 2px 8px #FFAA00; /* Bright golden shadow */
         }
 
-        /* Disney sparkles in the corners */
-        .sparkles {
+        /* Witch broom decorations */
+        .witch-broom {
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sparkle_Star.svg/1200px-Sparkle_Star.svg.png') no-repeat center;
-            background-size: contain;
-        }
-
-        .sparkles-left {
             top: 0;
             left: 0;
             width: 100px;
             height: 100px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Broom_icon.svg/1024px-Broom_icon.svg.png') no-repeat center;
+            background-size: contain;
+        }
+
+        .witch-broom-right {
+            top: 0;
+            right: 0;
         }
 
         /* Style for the Showtime button */
@@ -57,41 +53,33 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #3366cc; /* Disney blue */
+            background-color: #4b0082; /* Dark purple */
             color: #ffffff;
             font-size: 24px;
             font-weight: bold;
             padding: 20px;
             border-radius: 10px;
-            border: 3px solid #ffcc00; /* Disney gold border */
+            border: 3px solid #FFDD57; /* Magical gold border */
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
             margin-top: 50px;
-            box-shadow: 0 0 15px rgba(255, 204, 0, 0.5); /* Soft gold glow */
+            box-shadow: 0 0 15px rgba(255, 221, 87, 0.5); /* Soft gold glow */
         }
 
         .showtime-box:hover {
-            background-color: #ffcc00; /* Disney gold on hover */
-            color: #003366; /* Dark blue text on hover */
-            border: 3px solid #3366cc; /* Switch to blue border */
-            box-shadow: 0 0 20px rgba(51, 102, 204, 0.8); /* Soft blue glow on hover */
+            background-color: #FFDD57; /* Magical gold on hover */
+            color: #4b0082; /* Deep purple text on hover */
+            border: 3px solid #4b0082; /* Switch to purple border */
+            box-shadow: 0 0 20px rgba(75, 0, 130, 0.8); /* Soft purple glow on hover */
         }
 
         /* Footer styling */
         .footer {
             text-align: center;
             margin-top: 40px;
-            color: #003366;
+            color: #FFDD57;
             font-size: 16px;
-        }
-
-        .footer-mickey {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Mickey_Mouse_head_and_ears.svg/1024px-Mickey_Mouse_head_and_ears.svg.png') no-repeat center;
-            background-size: contain;
         }
 
         .footer p {
@@ -100,26 +88,35 @@
             justify-content: center;
         }
 
+        .footer-broom {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Broom_icon.svg/1024px-Broom_icon.svg.png') no-repeat center;
+            background-size: contain;
+        }
+
     </style>
 </head>
 <body>
 
     <h1>Who is Meesh?</h1>
 
-    <!-- Disney sparkles for a magical touch -->
-    <div class="sparkles"></div>
-    <div class="sparkles sparkles-left"></div>
+    <!-- Witch broom decorations for a subtle spooky touch -->
+    <div class="witch-broom"></div>
+    <div class="witch-broom witch-broom-right"></div>
 
     <!-- Showtime Button -->
     <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
         Showtime!
     </div>
 
-    <!-- Footer with Mickey Mouse ears -->
+    <!-- Footer with Witch Brooms -->
     <div class="footer">
         <p>
-            <span class="footer-mickey"></span> <!-- Mickey Mouse Icon -->
-            Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #ffcc00; text-decoration: none; margin-left: 5px;">get in touch</a>
+            <span class="footer-broom"></span> <!-- Left Broom -->
+            Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #FFDD57; text-decoration: none; margin-left: 5px;">get in touch</a>
+            <span class="footer-broom"></span> <!-- Right Broom -->
         </p>
     </div>
 
