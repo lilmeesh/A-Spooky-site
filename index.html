@@ -30,6 +30,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             text-shadow: 2px 2px 5px #551A8B; /* Purple shadow */
+            position: relative; /* To allow the spider to position relative to this title */
         }
 
         /* Style for the Showtime button */
@@ -61,10 +62,11 @@
         /* Spider and Web Animation */
         .spider-web {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 20px; /* Closer to the "Who is Meesh?" title */
+            left: 50%;
+            transform: translateX(-50%); /* Center the spider above the title */
             width: 0;
-            height: 200px;
+            height: 150px;
             border-right: 2px solid #000; /* Spider web thread */
         }
 
@@ -76,7 +78,7 @@
             height: 20px;
             background-color: #000;
             border-radius: 50%;
-            animation: crawl 5s infinite;
+            animation: crawl 4s infinite;
         }
 
         /* Legs of the spider */
@@ -106,7 +108,7 @@
                 top: 0;
             }
             100% {
-                top: 200px;
+                top: 150px;
             }
         }
 
@@ -123,7 +125,7 @@
 
     <h1>Who is Meesh?</h1>
 
-    <!-- Spider Web and Spider -->
+    <!-- Spider Web and Spider above the title -->
     <div class="spider-web">
         <div class="spider"></div>
     </div>
