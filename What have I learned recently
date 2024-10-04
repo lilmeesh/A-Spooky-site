@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What I've Learned Recently - Hocus Pocus Themed Page">
+    <title>What I've Learned Recently</title>
+    
+    <style>
+        /* Clean Hocus Pocus-Themed Background */
+        body {
+            font-family: 'Georgia', serif;
+            color: #ffffff; /* White text */
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #2e003e; /* Deep purple */
+            background-image: radial-gradient(circle at 50% 50%, #4b0082, #2e003e);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading style */
+        h1 {
+            text-align: center;
+            color: #FFDD57; /* Magical gold */
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px #FFAA00; /* Bright golden shadow */
+        }
+
+        h2 {
+            color: #FFDD57; /* Gold */
+            font-size: 30px;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #EEEEEE;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styling */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #FFDD57;
+            font-size: 16px;
+        }
+
+        .footer p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>What I've Learned Recently</h1>
+
+    <div class="container">
+        <h2>What is something that you have learned recently?</h2>
+        <p>I learned how to build entire websites using <strong>V0</strong> during this exercise as well as how to build code from asking prompt questions in both <strong>V0</strong> and <strong>Chat GPT</strong>. This experience has allowed me to enhance my skills in a practical and efficient way.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #FFDD57; text-decoration: none; margin-left: 5px;">get in touch</a></p>
+    </div>
+
+</body>
+</html>
