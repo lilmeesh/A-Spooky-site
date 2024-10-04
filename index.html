@@ -7,7 +7,7 @@
     <title>Who is Meesh?</title>
     
     <style>
-        /* Beetlejuice-Themed Background with Stripes */
+        /* Subtle Beetlejuice-Themed Background */
         body {
             font-family: 'Georgia', serif;
             color: #EEE; /* Light grey text */
@@ -15,9 +15,10 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            background: linear-gradient(135deg, #111 50%, #fff 50%);
-            background-attachment: fixed;
-            background-size: 100px 100px;
+            background-color: #111; /* Dark charcoal background */
+            background-image: radial-gradient(circle, rgba(0, 255, 0, 0.15) 20%, transparent 20%), radial-gradient(circle, rgba(85, 26, 139, 0.15) 20%, transparent 20%);
+            background-position: 0 0, 50px 50px;
+            background-size: 100px 100px; /* Light, subtle neon green and purple dots */
         }
 
         /* Heading style */
@@ -29,6 +30,7 @@
             font-family: 'Georgia', serif;
             text-transform: uppercase;
             letter-spacing: 2px;
+            text-shadow: 2px 2px 5px #551A8B; /* Purple shadow */
         }
 
         /* Style for the Showtime button */
@@ -36,7 +38,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #551a8b; /* Dark Purple */
+            background-color: #551A8B; /* Dark Purple */
             color: #ffffff;
             font-size: 24px;
             font-weight: bold;
@@ -47,12 +49,14 @@
             cursor: pointer;
             transition: all 0.3s ease;
             margin-top: 50px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Neon glow */
         }
 
         .showtime-box:hover {
             background-color: #00FF00; /* Neon green on hover */
             color: #000;
-            border: 3px solid #551a8b; /* Switch to purple border */
+            border: 3px solid #551A8B; /* Switch to purple border */
+            box-shadow: 0 0 20px rgba(85, 26, 139, 0.8); /* Purple glow on hover */
         }
 
         /* Footer styling */
