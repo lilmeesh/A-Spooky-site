@@ -59,29 +59,35 @@
             box-shadow: 0 0 20px rgba(85, 26, 139, 0.8); /* Purple glow on hover */
         }
 
-        /* Spider and Web Animation */
+        /* Spider Web */
         .spider-web {
             position: absolute;
-            top: 20px; /* Closer to the "Who is Meesh?" title */
+            top: 0;
             left: 50%;
-            transform: translateX(-50%); /* Center the spider above the title */
-            width: 0;
-            height: 150px;
-            border-right: 2px solid #000; /* Spider web thread */
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            background: radial-gradient(circle, transparent 60px, #f7f7f7 61px, transparent 61px);
         }
 
+        /* Spider */
         .spider {
             position: absolute;
-            top: 0;
-            left: -10px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 20px;
             height: 20px;
             background-color: #000;
             border-radius: 50%;
-            animation: crawl 4s infinite;
+            animation: crawl 6s infinite;
         }
 
-        /* Legs of the spider */
+        /* Spider Legs - Eight legs using ::before and ::after for each side */
         .spider::before, .spider::after {
             content: '';
             position: absolute;
@@ -90,25 +96,33 @@
             background-color: #000;
         }
 
+        /* Left-side legs */
         .spider::before {
-            top: 8px;
-            left: -15px;
+            top: 0;
+            left: -30px;
+            display: block;
             transform: rotate(45deg);
+            box-shadow:
+                0 4px, 0 8px, 0 12px; /* Simulates 3 legs */
         }
 
+        /* Right-side legs */
         .spider::after {
-            top: 8px;
-            right: -15px;
+            top: 0;
+            right: -30px;
+            display: block;
             transform: rotate(-45deg);
+            box-shadow:
+                0 4px, 0 8px, 0 12px; /* Simulates 3 legs */
         }
 
         /* Keyframes for the spider crawling down */
         @keyframes crawl {
             0% {
-                top: 0;
+                top: 20px;
             }
             100% {
-                top: 150px;
+                top: 400px; /* Crawl past the "Showtime" button */
             }
         }
 
@@ -125,10 +139,9 @@
 
     <h1>Who is Meesh?</h1>
 
-    <!-- Spider Web and Spider above the title -->
-    <div class="spider-web">
-        <div class="spider"></div>
-    </div>
+    <!-- Spider Web and Spider -->
+    <div class="spider-web"></div>
+    <div class="spider"></div>
 
     <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
         Showtime!
