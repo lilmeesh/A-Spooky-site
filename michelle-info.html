@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Michelle's Information - Beetlejuice Themed Page">
+    <meta name="description" content="Michelle's Information - Beetlejuice and Halloween Themed Page">
     <title>Michelle's Information</title>
     
     <style>
-        /* Clean Beetlejuice-Themed Background */
+        /* Cleaner, Halloween-Themed Background */
         body {
             font-family: 'Georgia', serif;
             color: #4B0082; /* Deep Purple text */
@@ -15,32 +15,33 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            background-color: #f7f7f7; /* Light, neutral background */
-            background-image: linear-gradient(45deg, #f7f7f7 25%, #d3e5f1 25%, #d3e5f1 50%, #f7f7f7 50%, #f7f7f7 75%, #d3e5f1 75%);
-            background-size: 100px 100px; /* Subtle blue criss-cross pattern */
+            background-color: #2c2c2c; /* Darker background for a spooky atmosphere */
+            background-image: linear-gradient(135deg, #2c2c2c 25%, #444444 25%, #444444 50%, #2c2c2c 50%);
+            background-size: 100px 100px;
+            position: relative;
+            border-radius: 15px;
         }
 
         /* Heading style */
         h1 {
             text-align: center;
-            color: #00FF00; /* Neon Green */
+            color: #FFA500; /* Halloween orange */
             font-size: 48px;
             margin-bottom: 20px;
-            font-family: 'Georgia', serif;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 5px #551A8B; /* Purple shadow */
+            text-shadow: 2px 2px 10px #551A8B; /* Purple shadow */
         }
 
         h2 {
-            color: #551a8b; /* Dark purple */
+            color: #FF6347; /* Darker Halloween orange */
             font-size: 30px;
             margin-top: 30px;
         }
 
         p {
             font-size: 18px;
-            color: #4B0082;
+            color: #EEEEEE;
             margin-bottom: 20px;
         }
 
@@ -58,22 +59,33 @@
             border: 6px solid #00FF00; /* Neon green border */
         }
 
+        /* Footer styling */
         .footer {
             text-align: center;
             margin-top: 40px;
-            color: #4B0082;
+            color: #EEEEEE;
             font-size: 16px;
         }
 
-        a {
-            color: #00FF00;
-            text-decoration: none;
+        .footer-pumpkin {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Halloween_pumpkin_icon.svg/640px-Halloween_pumpkin_icon.svg.png') no-repeat center;
+            background-size: contain;
         }
+
+        .footer p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
     </style>
 </head>
 <body>
 
-    <h1>Michelle's Story</h1>
+    <h1>Michelle's Journey</h1>
 
     <div class="container">
         <h2>A Career in Film and Technology</h2>
@@ -81,6 +93,16 @@
 
         <p>Even today, those experiences influence my work in tech. I approach every project with the same attention to detail and passion for innovation that I learned on set. Now, when I'm not immersed in tech, you can find me hiking with my husband and our charcoal Labrador, often exploring the scenic beauty of Malibu Beach.</p>
         <img src="/malibu-beach.png" alt="Malibu Beach" class="malibu-image">
+
+        <h2>Passion for Customer Success</h2>
+        <p>My passion lies in helping clients achieve their goals. I thrive on building relationships with customers, understanding their needs, and driving success through collaboration and innovative solutions. Over the years, I’ve had the privilege of working closely with amazing clients, ensuring they get the most value out of the products and services they use.</p>
+
+        <p>Customer success, for me, is more than just support—it's about truly partnering with clients to ensure they are set up for success and reaching their full potential. This requires ongoing communication, training, and strategic planning. I love seeing the positive impact our solutions can have on a client’s business, and I take pride in being a part of that journey.</p>
+
+        <h2>Becoming More Technical</h2>
+        <p>In my role, I’m constantly looking to enhance my technical knowledge to better support my customers. By working closely with our <span class="highlight">solutions architect</span> and <span class="highlight">product teams</span>, I’m learning the inner workings of our platform and solutions so I can provide deeper insights and technical support. I enjoy diving into the technical side of things, from understanding product architecture to exploring how integrations work, and I look forward to continuing to expand this knowledge.</p>
+
+        <p>This desire to become more technical comes from my commitment to providing the best possible support to my customers. I believe that having a strong technical foundation allows me to better anticipate challenges and offer proactive solutions. My goal is to bridge the gap between technical complexity and customer success, ensuring that clients feel confident and empowered in using our products.</p>
 
         <h2>Favorite Movies</h2>
         <p>I have a deep appreciation for films that blend creativity, mystery, and style—films that surprise you and make you think. Some of my favorite movies are:</p>
@@ -92,13 +114,15 @@
 
         <h2>Family and Inspiration</h2>
         <p>Family is the foundation of everything I do. I’m incredibly close to my sister, whom I affectionately call "Peanut." Her strength and determination inspire me daily, especially now that she’s qualified for the Boston Marathon. Her success reminds me to keep pushing forward and chasing my own goals.</p>
-
-        <h2>A Journey in Technology</h2>
-        <p>My interest in technology grew when I started a podcast with a close friend. It was through this project that I discovered my passion for coding and the endless possibilities that come with building in the digital world. We’re excited to use <span class="highlight">Vercel</span> to launch new episodes of our podcast every week. I'm constantly eager to learn more, face new challenges, and continue building on this journey.</p>
     </div>
 
+    <!-- Footer with Pumpkins -->
     <div class="footer">
-        <p>Thanks for visiting! Feel free to <a href="mailto:meesh@example.com">get in touch</a>.</p>
+        <p>
+            <span class="footer-pumpkin"></span> <!-- Left Pumpkin -->
+            Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #00FF00; text-decoration: none; margin-left: 5px;">get in touch</a>
+            <span class="footer-pumpkin"></span> <!-- Right Pumpkin -->
+        </p>
     </div>
 
 </body>
