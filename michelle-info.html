@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Who is Meesh - Beetlejuice Themed Page">
-    <title>Who is Meesh?</title>
+    <meta name="description" content="Michelle's Information - Beetlejuice Themed Page">
+    <title>Michelle's Information</title>
     
     <style>
-        /* Spookier Beetlejuice-Themed Background with Dark Colors */
+        /* Clean Beetlejuice-Themed Background */
         body {
             font-family: 'Georgia', serif;
             color: #4B0082; /* Deep Purple text */
@@ -15,11 +15,9 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            background-color: #1d1b1b; /* Darker background */
-            background-image: linear-gradient(45deg, #1d1b1b 25%, #3a3a3a 25%, #3a3a3a 50%, #1d1b1b 50%, #1d1b1b 75%, #3a3a3a 75%);
-            background-size: 100px 100px; /* Darker criss-cross pattern */
-            position: relative;
-            overflow: hidden; /* Ensure fog stays inside */
+            background-color: #f7f7f7; /* Light, neutral background */
+            background-image: linear-gradient(45deg, #f7f7f7 25%, #d3e5f1 25%, #d3e5f1 50%, #f7f7f7 50%, #f7f7f7 75%, #d3e5f1 75%);
+            background-size: 100px 100px; /* Subtle blue criss-cross pattern */
         }
 
         /* Heading style */
@@ -31,118 +29,35 @@
             font-family: 'Georgia', serif;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 10px #551A8B; /* Brighter Purple shadow */
+            text-shadow: 2px 2px 5px #551A8B; /* Purple shadow */
         }
 
-        /* Cobweb decoration for corners */
-        .cobweb {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Spider_Web.svg/1024px-Spider_Web.svg.png') no-repeat center;
-            background-size: contain;
+        h2 {
+            color: #551a8b; /* Dark purple */
+            font-size: 30px;
+            margin-top: 30px;
         }
 
-        .cobweb.top-left {
-            top: 0;
-            left: 0;
+        p {
+            font-size: 18px;
+            color: #4B0082;
+            margin-bottom: 20px;
         }
 
-        .cobweb.top-right {
-            top: 0;
-            right: 0;
-        }
-
-        /* Style for the Showtime button with flickering neon effect */
-        .showtime-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #551A8B; /* Dark Purple */
-            color: #ffffff;
-            font-size: 24px;
+        .highlight {
+            color: #00FF00; /* Neon green highlights */
             font-weight: bold;
-            padding: 20px;
+        }
+
+        /* Styling for Malibu image */
+        .malibu-image {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
             border-radius: 10px;
-            border: 3px solid #00FF00; /* Neon green border */
-            text-align: center;
-            cursor: pointer;
-            animation: flicker 1.5s infinite;
-            transition: all 0.3s ease;
-            margin-top: 50px;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Neon glow */
-            position: relative;
-            z-index: 2; /* Higher z-index to appear above fog */
+            border: 6px solid #00FF00; /* Neon green border */
         }
 
-        /* Flickering Neon Animation */
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-
-        .showtime-box:hover {
-            background-color: #00FF00; /* Neon green on hover */
-            color: #000;
-            border: 3px solid #551A8B; /* Switch to purple border */
-            box-shadow: 0 0 20px rgba(85, 26, 139, 0.8); /* Purple glow on hover */
-        }
-
-        /* Flying bats with animation */
-        .bat {
-            position: absolute;
-            top: -50px;
-            width: 50px;
-            height: 50px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Bat_icon.svg/640px-Bat_icon.svg.png') no-repeat center;
-            background-size: contain;
-            animation: fly 10s infinite linear;
-        }
-
-        /* Animation for bats flying across the screen */
-        .bat:nth-child(1) {
-            left: -100px;
-            animation-delay: 0s;
-        }
-
-        .bat:nth-child(2) {
-            left: -200px;
-            animation-delay: 3s;
-        }
-
-        .bat:nth-child(3) {
-            left: -300px;
-            animation-delay: 6s;
-        }
-
-        @keyframes fly {
-            0% {
-                top: 10%;
-                left: -100px;
-                transform: scale(0.5) rotate(0deg);
-            }
-            50% {
-                top: 50%;
-                left: 50%;
-                transform: scale(1) rotate(20deg);
-            }
-            100% {
-                top: 10%;
-                left: 100%;
-                transform: scale(0.5) rotate(0deg);
-            }
-        }
-
-        /* Pumpkins in the footer */
-        .footer-pumpkin {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Halloween_pumpkin_icon.svg/640px-Halloween_pumpkin_icon.svg.png') no-repeat center;
-            background-size: contain;
-        }
-
-        /* Footer styling */
         .footer {
             text-align: center;
             margin-top: 40px;
@@ -150,63 +65,41 @@
             font-size: 16px;
         }
 
-        .footer p {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        a {
+            color: #00FF00;
+            text-decoration: none;
         }
-
-        /* Fog Effect */
-        .fog {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/fog.png');
-            opacity: 0.15;
-            animation: drift 20s infinite linear;
-            z-index: 1; /* Lower z-index so that buttons are clickable */
-        }
-
-        @keyframes drift {
-            0% {
-                transform: translate(0, 0);
-            }
-            100% {
-                transform: translate(-200px, -100px);
-            }
-        }
-
     </style>
 </head>
 <body>
 
-    <h1>Who is Meesh?</h1>
+    <h1>Michelle's Story</h1>
 
-    <!-- Halloween decorations: cobwebs and animated bats -->
-    <div class="cobweb top-left"></div>
-    <div class="cobweb top-right"></div>
-    <div class="bat"></div>
-    <div class="bat"></div>
-    <div class="bat"></div>
+    <div class="container">
+        <h2>A Career in Film and Technology</h2>
+        <p>Before diving into the world of technology, I spent years working on film sets, learning the art of storytelling, and collaborating with talented creatives. My background as a theatre major fostered my love for production and gave me a deep appreciation for the power of creative collaboration.</p>
 
-    <!-- Showtime Button with Bat Decoration -->
-    <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
-        Showtime!
+        <p>Even today, those experiences influence my work in tech. I approach every project with the same attention to detail and passion for innovation that I learned on set. Now, when I'm not immersed in tech, you can find me hiking with my husband and our charcoal Labrador, often exploring the scenic beauty of Malibu Beach.</p>
+        <img src="/malibu-beach.png" alt="Malibu Beach" class="malibu-image">
+
+        <h2>Favorite Movies</h2>
+        <p>I have a deep appreciation for films that blend creativity, mystery, and style—films that surprise you and make you think. Some of my favorite movies are:</p>
+        <ul>
+            <li><strong>Beetlejuice</strong> – A quirky, offbeat masterpiece that inspires me to embrace my weird and creative side.</li>
+            <li><strong>Double Indemnity</strong> – A timeless noir that has an edge of danger and elegance.</li>
+            <li><strong>Sabrina</strong> – A perfect balance of charm and style, led by the unforgettable Audrey Hepburn.</li>
+        </ul>
+
+        <h2>Family and Inspiration</h2>
+        <p>Family is the foundation of everything I do. I’m incredibly close to my sister, whom I affectionately call "Peanut." Her strength and determination inspire me daily, especially now that she’s qualified for the Boston Marathon. Her success reminds me to keep pushing forward and chasing my own goals.</p>
+
+        <h2>A Journey in Technology</h2>
+        <p>My interest in technology grew when I started a podcast with a close friend. It was through this project that I discovered my passion for coding and the endless possibilities that come with building in the digital world. We’re excited to use <span class="highlight">Vercel</span> to launch new episodes of our podcast every week. I'm constantly eager to learn more, face new challenges, and continue building on this journey.</p>
     </div>
 
-    <!-- Footer with Pumpkins -->
     <div class="footer">
-        <p>
-            <span class="footer-pumpkin"></span> <!-- Left Pumpkin -->
-            Thanks for visiting! Feel free to <a href="mailto:meesh@example.com" style="color: #00FF00; text-decoration: none; margin-left: 5px;">get in touch</a>
-            <span class="footer-pumpkin"></span> <!-- Right Pumpkin -->
-        </p>
+        <p>Thanks for visiting! Feel free to <a href="mailto:meesh@example.com">get in touch</a>.</p>
     </div>
-
-    <!-- Fog effect for the spooky vibe -->
-    <div class="fog"></div>
 
 </body>
 </html>
