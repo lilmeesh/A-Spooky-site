@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Who is Meesh - Hocus Pocus Themed Page">
-    <title>Who is Meesh?</title>
+    <meta name="description" content="Who is Michelle - Hocus Pocus Themed Page">
+    <title>Who is Michelle?</title>
     
     <style>
         /* Clean Hocus Pocus-Themed Background */
@@ -18,6 +18,7 @@
             background-image: radial-gradient(circle at 50% 50%, #4b0082, #2e003e);
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative; /* To position pumpkins */
         }
 
         /* Heading style */
@@ -57,6 +58,24 @@
             box-shadow: 0 0 20px rgba(75, 0, 130, 0.8); /* Soft purple glow on hover */
         }
 
+        /* Pumpkin decorations */
+        .pumpkin {
+            position: absolute;
+            bottom: -20px;
+            width: 80px;
+            height: 80px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Halloween_pumpkin_icon.svg/640px-Halloween_pumpkin_icon.svg.png') no-repeat center;
+            background-size: contain;
+        }
+
+        .pumpkin-left {
+            left: -20px;
+        }
+
+        .pumpkin-right {
+            right: -20px;
+        }
+
         /* Footer styling */
         .footer {
             text-align: center;
@@ -71,25 +90,24 @@
             justify-content: center;
         }
 
-        /* Make "get in touch" bold */
-        .footer a {
-            font-weight: bold;
-        }
-
     </style>
 </head>
 <body>
 
-    <h1>Who is Meesh?</h1>
+    <h1>Who is Michelle?</h1>
 
     <!-- Hocus Pocus Button with the new text -->
     <div class="hocus-pocus-button" onclick="window.location.href='michelle-info.html'">
         It's all a bunch of Hocus Pocus!
     </div>
 
+    <!-- Pumpkin decorations for Halloween -->
+    <div class="pumpkin pumpkin-left"></div>
+    <div class="pumpkin pumpkin-right"></div>
+
     <!-- Footer with updated text and bold "get in touch" -->
     <div class="footer">
-        <p>Light the black flame candle to <a href="mailto:meesh@example.com" style="color: #FFDD57; text-decoration: none; margin-left: 5px;">get in touch</a></p>
+        <p>Light the black flame candle to <a href="mailto:meesh@example.com" style="color: #FFDD57; text-decoration: none; font-weight: bold; margin-left: 5px;">get in touch</a></p>
     </div>
 
 </body>
