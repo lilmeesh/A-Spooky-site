@@ -58,6 +58,58 @@
             box-shadow: 0 0 20px rgba(85, 26, 139, 0.8); /* Purple glow on hover */
         }
 
+        /* Spider and Web Animation */
+        .spider-web {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 200px;
+            border-right: 2px solid #000; /* Spider web thread */
+        }
+
+        .spider {
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            animation: crawl 5s infinite;
+        }
+
+        /* Legs of the spider */
+        .spider::before, .spider::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: #000;
+        }
+
+        .spider::before {
+            top: 8px;
+            left: -15px;
+            transform: rotate(45deg);
+        }
+
+        .spider::after {
+            top: 8px;
+            right: -15px;
+            transform: rotate(-45deg);
+        }
+
+        /* Keyframes for the spider crawling down */
+        @keyframes crawl {
+            0% {
+                top: 0;
+            }
+            100% {
+                top: 200px;
+            }
+        }
+
         /* Footer styling */
         .footer {
             text-align: center;
@@ -70,6 +122,11 @@
 <body>
 
     <h1>Who is Meesh?</h1>
+
+    <!-- Spider Web and Spider -->
+    <div class="spider-web">
+        <div class="spider"></div>
+    </div>
 
     <div class="showtime-box" onclick="window.location.href='michelle-info.html'">
         Showtime!
